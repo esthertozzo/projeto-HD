@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-light: #f4f4f4;
+    --color-dark: #222;
+    --color-range: #ff6600;
+}
+html{
+    scroll-behavior: smooth;
+}
+.hero{
+    height: 100dvh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
+    url(/images/motos/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* esticar a imagem até ocupar toda a imagem
+*/  background-position: center;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    .header-hero{
+        background-color: #f4f4f4;
+
+        h1{
+            color: var(--color-light);
+        }
+    }
+}
+
+
+section{
+    height: 100dvh;
+}
