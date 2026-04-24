@@ -1,36 +1,95 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Importando fontes */
+@font-face {
+  font-family: Quiksand-Light;
+  src: url(../fonts/Quicksand-Light.ttf);
 }
-:root{
-    --color-light: #f4f4f4;
-    --color-dark: #222;
-    --color-range: #ff6600;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+:root {
+  --color-light: #f4f4f4;
+  --color-dark: #222;
+  --color-range: #ff6600;
+  --rosa-fiap: #dc143c;
+  --spacing-sm: 10px;
+  --spacing-md: 30px;
 }
-.hero{
-    height: 100dvh;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
+html {
+  scroll-behavior: smooth;
+  font-family: Quiksand-Light;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: var(--color-light);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-range);
+  }
+}
+
+.hero {
+  height: 100dvh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)
+    ),
     url(/images/motos/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; /* esticar a imagem até ocupar toda a imagem
-*/  background-position: center;
-    background-position: 50%;
-    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; /* esticar a imagem até ocupar toda a imagem*/
+  background-position: center;
+  background-position: 50%;
+  background-attachment: fixed;
 
-    .header-hero{
-        background-color: #f4f4f4;
+  .header-hero {
+    background-color: transparent;
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    align-items: center; /*vertical*/
+    justify-content: space-between; /* horizonal */
+    padding-inline: var(--spacing-md);
 
-        h1{
-            color: var(--color-light);
-        }
+    h1 {
+      color: var(--color-light);
     }
+
+    .nav-hero-menu {
+      display: flex;
+      gap: var(--spacing-md);
+    }
+  }
+
+  .cta {
+    min-height: calc(100dvh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    color: var(--color-light);
+    text-align: center;
+
+    h2{
+        font-size: 7vmin;  /*se ajusta de acordo com a tela*/
+        text-wrap: balance;
+    }
+    p{
+        width: 60%;
+        text-wrap: balace;
+        line-height: 1.6;
+    }
+  }
 }
 
-
-section{
-    height: 100dvh;
+section {
+  height: 100dvh;
 }
